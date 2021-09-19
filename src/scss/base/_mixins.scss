@@ -30,6 +30,30 @@
     }
 }
 
+@mixin btn($color, $text) {
+    background-color: $color;
+    font-size: 1.125rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $text;
+    text-decoration: none;
+    transition: background-color .3s ease;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color, 10);
+    }
+
+    @include md {
+        width: auto;
+    }
+}
+
 @mixin grid($columns, $gap) {
     display: grid;
     grid-template-columns: repeat($columns,1fr);

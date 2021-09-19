@@ -1,5 +1,5 @@
 @use "variables" as v;
-
+ 
 html {
     box-sizing: border-box;
 }
@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    background-color: v.$lightCoffee;
     font-family: v.$mainFont; 
     font-size: 1rem;
     line-height: 1.6;

@@ -1,0 +1,37 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.md { 
+        flex-direction: row;
+    }
+
+    &__link {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+        color: v.$black;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include m.md { 
+            margin-right: 1.25rem;
+            margin-bottom: 0;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        &--register {
+            @include m.btn(v.$primary, v.$white);
+        }
+    }
+
+}
