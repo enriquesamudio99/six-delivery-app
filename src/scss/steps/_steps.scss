@@ -1,0 +1,52 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.steps {
+   
+    &__content {
+        margin-top: -1px;
+        padding: v.$gutter 0;
+        background-color: v.$primary;
+    }
+
+    &__heading {
+        color: v.$white;
+        text-align: center;
+
+        &--subtitle {
+            margin-top: .5rem;
+            display: block;
+            font-size: 1.125rem;
+
+            @include m.md { 
+                font-size: 1.375rem;
+            }
+
+            @include m.xl { 
+                font-size: 1.625;
+            }
+        }
+    }
+
+    &__grid {
+        @include m.grid(1, 0);
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include m.lg { 
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    &__img {
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05) rotate(-1deg);
+        }
+    }
+
+    
+}
