@@ -1,0 +1,78 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.form {
+    padding: v.$gutter 0;
+
+    &__grid {
+        @include m.grid(1, 2.5rem);
+
+        @include m.md { 
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    &__content {
+        background-color: v.$primary;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        @include m.lg { 
+            padding: v.$gutter;
+        }
+    }
+
+    &__heading {
+        color: v.$white;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__field {
+        margin-bottom: 1.25rem;
+
+        &:last-of-type {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__label {
+        display: block;
+        color: v.$white;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: .5rem;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 1rem;
+        outline: none;
+        border: none;
+    }
+
+    &__submit {
+        @include m.btn(v.$secondary, v.$white);
+        border-radius: 0;
+        outline: none;
+        @include m.md { 
+            width: 100%;
+        }
+    }
+    
+    &__img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 250px;
+
+        @include m.md { 
+            width: 100%;
+        }
+    }
+}

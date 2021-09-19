@@ -14,7 +14,10 @@
         font-size: 1.125rem;
         font-weight: 700;
         margin-bottom: 1.25rem;
-        color: v.$black;
+        padding: .5rem 1rem;
+        width: 100%;
+        text-align: center;
+        color: v.$black; 
 
         &:last-of-type {
             margin-bottom: 0;
@@ -23,6 +26,8 @@
         @include m.md { 
             margin-right: 1.25rem;
             margin-bottom: 0;
+            padding: 0;
+            width: auto;
 
             &:last-of-type {
                 margin-right: 0;
