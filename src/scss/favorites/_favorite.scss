@@ -1,0 +1,57 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.favorite {
+    background-color: v.$white;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px 6px rgba($color: #000000, $alpha: .1);
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.lg { 
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+    }
+
+    &__img {
+        width: 120px;
+        margin-bottom: 2rem;
+
+        @include m.lg { 
+            width: 140px;
+            margin-bottom: 0;
+            margin-right: 2rem;
+        }
+    }
+
+    &__content {
+        text-align: center;
+
+        @include m.lg { 
+            text-align: left;
+        }
+    }
+
+    &__rating {
+        width: 120px;
+        margin: 0 auto 1rem;
+
+        @include m.lg { 
+            margin: 0 0 1rem;
+        }
+    }
+
+    &__name {
+        color: v.$primary;
+        font-size: 1.5rem;
+
+        @include m.md { 
+            font-size: 1.75rem;
+        }
+    }
+}

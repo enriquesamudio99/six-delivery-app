@@ -1,0 +1,21 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.favorites {
+    background-color: v.$lightGray;
+    padding: v.$gutter 0; 
+
+    &__heading {
+        text-align: center;
+        margin-bottom: v.$gutter;
+        color: v.$secondary;
+    }
+
+    &__grid {
+        @include m.grid(1,1.5rem);
+
+        @include m.md { 
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
