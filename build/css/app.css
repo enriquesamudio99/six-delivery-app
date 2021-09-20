@@ -504,7 +504,7 @@ h3 {
   }
 }
 .nav__link--register {
-  background-color: #c02731;
+  background-color: #df3030;
   font-size: 1.125rem;
   padding: 0.75rem 1rem;
   border-radius: 1rem;
@@ -519,7 +519,7 @@ h3 {
 }
 .nav__link--register:hover {
   cursor: pointer;
-  background-color: #961e26;
+  background-color: #bf1d1d;
 }
 @media (min-width: 768px) {
   .nav__link--register {
@@ -541,7 +541,7 @@ h3 {
   }
 }
 .form__content {
-  background-color: #c02731;
+  background-color: #df3030;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -623,7 +623,7 @@ h3 {
 .steps__content {
   margin-top: -1px;
   padding: 3.5rem 0;
-  background-color: #c02731;
+  background-color: #df3030;
 }
 .steps__heading {
   color: #ffffff;
@@ -821,12 +821,64 @@ h3 {
   }
 }
 .favorite__name {
-  color: #c02731;
+  color: #df3030;
   font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .favorite__name {
     font-size: 1.75rem;
+  }
+}
+
+.deliverymen {
+  padding: 3.5rem 0;
+}
+.deliverymen__heading {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.deliverymen__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .deliverymen__grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.deliverymen__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+.deliverymen__text {
+  margin-bottom: 1rem;
+}
+.deliverymen__btn {
+  background-color: #df3030;
+  font-size: 1.125rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+.deliverymen__btn:hover {
+  cursor: pointer;
+  background-color: #bf1d1d;
+}
+@media (min-width: 768px) {
+  .deliverymen__btn {
+    width: auto;
   }
 }
 

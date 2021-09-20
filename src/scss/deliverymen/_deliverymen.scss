@@ -1,0 +1,36 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.deliverymen {
+    padding: v.$gutter 0;
+
+    &__heading {
+        text-align: center;
+        margin-bottom: v.$gutter;
+    }
+
+    &__grid {
+        @include m.grid(1,1.5rem);
+
+        @include m.md { 
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+    }
+
+    &__btn {
+        @include m.btn(v.$primary, v.$white);
+    }
+}
